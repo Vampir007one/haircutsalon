@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include("pages/connect.php");
+    include($_SERVER['DOCUMENT_ROOT'] . "/pages/connect.php");
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -10,22 +10,15 @@
 <meta name="Description" content="Официальный сайт сети парикмахерских Самая-Самая">
 <meta name="Keywords" content="Парикмахерская Самая-Самая">
 <meta name="Author" lang="ru" content="Парикмахерская Самая-Самая">
-
-<link rel="stylesheet" type="text/css" href="css/style.css">
-
-<script type="text/javascript" async="" src="js/watch.js"></script>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
-<script type="text/javascript" src="js/cusel-min-2.5.js"></script>
-<script type="text/javascript" src="js/icheck.min.js"></script>
-
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
 <title>Парикмахерская Самая-Самая.</title>
 </head>
 <body>
 <div id="wrapper">
     <div id="header">
         <div class="logo">
-            <img src="img/logo.png" alt="Парикмахерская Самая-Самая">
+            <img src="/img/logo.png" alt="Парикмахерская Самая-Самая">
         </div>
         <nav class="nav-menu">
             <ul>
@@ -49,7 +42,7 @@
                 </li>
                 <li class="recall"><a href="#">Оставить отзыв</a>
                     <ul>
-                        <li><img src="img/otziv_big.jpg"><a href="#"><img src="img/otziv_link.png"></a></li>
+                        <li><img src="/img/otziv_big.jpg"><a href="#"><img src="img/otziv_link.png"></a></li>
                     </ul>
                 </li>
             </ul>
@@ -58,32 +51,40 @@
     <div class="container">
         <div id="aside">
             <div class="message">НАЙДИ СВОЕГО <span>МАСТЕРА</span></div>
-            <?php 
-                if (!isset($_SESSION['id'])) 
-                {
-                    include("pages/userAuth/form_auth.php"); 
-                }
-                else
-                {
-                    if (isset($_SESSION['id'])) 
-                    {
-print <<<HERE
-<p>Добро пожаловать $_SESSION[username]</p>
-HERE;
-                    }
-                    else
-                    {
-                        include("pages/userAuth/form_auth.php"); 
-                    }
-                }
-            ?>
+
+<div id="formRegLog">
+    <h3>Регистрация</h3>
+    <form action="" method="POST" id="regForm">
+        <div class="inputblock">
+            <label for="login">Логин</label>
+            <input type="text" name="login" id="login" placeholder="Введите логин">
+        </div>
+        <div class="inputblock">
+            <label for="fio">Имя</label>
+            <input type="text" name="fio" id="fio" placeholder="Введите своё имя">
+        </div>
+        <div class="inputblock">
+            <label for="mobile">Номер телефона</label>
+            <input type="phone" name="mobile" id="mobile" placeholder="Введите номер телефона">
+        </div>
+        <div class="inputblock">
+            <label for="password">Пароль</label>
+            <input type="password" name="password" id="password" placeholder="Введите пароль">
+        </div>
+        <div class="inputblock">
+            <input type="submit" value="Зарегистрироваться" id="regBtn">
+        </div>
+        <div class="answerForm" id="answerForm"></div>
+    </form>
+</div>
+<script src="/pages/userAuth/ajaxJS/reg_ajax.js"></script>
             <div class="catalog-menu">
-                <?php include("pages/content/menu.php")?>
+                <?php include($_SERVER['DOCUMENT_ROOT'] . "/pages/content/menu.php")?>
             </div>
             
         </div>
         <div id="content">
-           <?php include("pages/content/content.php")?>
+           <?php include($_SERVER['DOCUMENT_ROOT'] . "/pages/content/content.php")?>
         </div>
     </div>
     <div id="footer">

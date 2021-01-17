@@ -1,4 +1,3 @@
 <?php
-    $db = mysqli_connect("localhost", "root", "", "haircutsalon");
-    $home = "/";
+    $db = mysqli_connect("localhost", "root", "", "kalmykovhaircutsalon");
 ?>

@@ -1,8 +1,6 @@
-<?php
-    include("connect.php");
-?>
+<!-- FILE AUTH USER -->
 <div id="formRegLog">
-    <h3>Регистрация</h3>
+    <h3>Авторизация</h3>
     <form action="" method="post">
         <div class="inputblock">
             <label for="login">Логин</label>
@@ -15,5 +13,8 @@
         <div class="inputblock">
             <input type="submit" value="Войти">
         </div>
+        <a href="pages/userAuth/form_reg.php">Регистрация</a>
+        <a href="">Восстановить пароль</a>
+
     </form>
 </div>
