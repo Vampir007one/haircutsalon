@@ -32,7 +32,7 @@
             $_SESSION['login'] = $allUserdata['login'];
             $_SESSION['username'] = $allUserdata['name'];
             $result = [
-                'check' => 'Регистрация прошла успешно',
+                'check' => 'Регистрация прошла успешно <br> <a href="/">Войти в аккаунт</a>',
             ];
           }
       }
