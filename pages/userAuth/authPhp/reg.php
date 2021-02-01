@@ -31,6 +31,7 @@
             $_SESSION['id'] = $allUserdata['id'];
             $_SESSION['login'] = $allUserdata['login'];
             $_SESSION['username'] = $allUserdata['name'];
+            $_SESSION['role'] = $allUserdata['role'];
             $result = [
                 'check' => 'Регистрация прошла успешно <br> <a href="/">Войти в аккаунт</a>',
             ];

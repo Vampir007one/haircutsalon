@@ -22,7 +22,7 @@ ul {
 #wrapper {
     width: 995px;
     margin: 0px auto;
-	margin-top: 7px;
+    margin-top: 7px;
 }
 
 .container {
@@ -34,7 +34,7 @@ ul {
 
 .clear {
     clear: both;
-	display: block;
+    display: block;
 }
 
 #header {
@@ -57,7 +57,7 @@ ul {
     top: 20px;
     background: #c90023;
     height: 45px;
-	width: 840px;
+    width: 840px;
     box-shadow: 1px 1px 3px #969696;
 }
 
@@ -84,68 +84,67 @@ ul {
     background: #a51b1b;
 }
 
-#header .nav-menu li ul, #menu li div {
-	position: absolute;
-	margin: 0px 0 0 0;
-	padding: 0px;
-	z-index: 19;
-	background: #831417;
-	display: none;
+#header .nav-menu li ul,
+#menu li div {
+    position: absolute;
+    margin: 0px 0 0 0;
+    padding: 0px;
+    z-index: 19;
+    background: #831417;
+    display: none;
 }
 
-
-#header .nav-menu li:hover ul, .nav-menu li:hover div {
-	-moz-box-shadow: 1px 1px 3px #969696;
-	-webkit-box-shadow: 1px 1px 3px #969696;
-	box-shadow: 1px 1px 3px #969696;
-	display: block;
+#header .nav-menu li:hover ul,
+.nav-menu li:hover div {
+    -moz-box-shadow: 1px 1px 3px #969696;
+    -webkit-box-shadow: 1px 1px 3px #969696;
+    box-shadow: 1px 1px 3px #969696;
+    display: block;
 }
 
 #header .nav-menu li ul li {
-	float: none;
-	display: block;
-	padding: 10px;
-	color: #fff;
-	font-weight: normal;
-	font-size: 12px;
+    float: none;
+    display: block;
+    padding: 10px;
+    color: #fff;
+    font-weight: normal;
+    font-size: 12px;
 }
 
 #header .nav-menu li ul li.menu_left {
-	float: left;
-	width: 150px;
-	height: 30px;
+    float: left;
+    width: 150px;
+    height: 30px;
 }
 
 #header .nav-menu li ul li a {
-	text-decoration: underline;
-	padding: 0px;
+    text-decoration: underline;
+    padding: 0px;
     font-weight: normal;
 }
 
 #header .nav-menu li ul li a:hover {
-	text-decoration: none;
+    text-decoration: none;
 }
 
-#header .nav-menu li.recall:hover{
-	background: transparent;
+#header .nav-menu li.recall:hover {
+    background: transparent;
 }
 
 #header .nav-menu li.recall ul {
-	margin: -3px 0 0 -793px;
+    margin: -3px 0 0 -793px;
 }
 
 #header .nav-menu li.recall ul li {
-	padding: 0px;
+    padding: 0px;
 }
 
 #header .nav-menu li.recall ul li a {
-	position: absolute;
-	margin: -92px 0 0 40px;
-	color: #831417;
-	font-size: 24px;
+    position: absolute;
+    margin: -92px 0 0 40px;
+    color: #831417;
+    font-size: 24px;
 }
-
-
 
 #aside {
     float: left;
@@ -191,7 +190,6 @@ ul {
 #aside .selectService p a:hover {
     text-decoration: underline;
 }
-
 
 #aside h4 {
     color: #6D6D6D;
@@ -243,7 +241,7 @@ ul {
     margin-left: 20px;
     background: url("../img/metro.png") no-repeat 0 -1px;
     vertical-align: top;
-	background-size: 40px 40px;
+    background-size: 40px 40px;
 }
 
 #content .metro a {
@@ -262,7 +260,7 @@ ul {
     color: blue;
 }
 
-#content .selectPhoto input[type=checkbox]{
+#content .selectPhoto input[type=checkbox] {
     margin-bottom: 2px;
 }
 
@@ -284,18 +282,19 @@ ul {
     margin-bottom: 2px;
 }
 
+
 /* Мастера */
 
 .master {
     border: dotted 1px #c70300;
-	border-radius: 10px;
-	float: left;
+    border-radius: 10px;
+    float: left;
     margin: 5px 4px 25px 4px;
-	width: 370px;
-	-moz-box-shadow: 0px 0px 7px #949494;
-	-webkit-box-shadow: 0px 0px 7px #949494;
-	box-shadow: 0px 0px 7px #949494;
-	background: #f2f3f1;
+    width: 370px;
+    -moz-box-shadow: 0px 0px 7px #949494;
+    -webkit-box-shadow: 0px 0px 7px #949494;
+    box-shadow: 0px 0px 7px #949494;
+    background: #f2f3f1;
     overflow: hidden;
 }
 
@@ -316,7 +315,7 @@ ul {
     text-decoration: none;
 }
 
-.master .name > span {
+.master .name>span {
     display: block;
     color: #333;
     border: 1px solid #ccc;
@@ -421,9 +420,9 @@ ul {
 }
 
 .master .left-info img:hover {
-	-moz-box-shadow: 0px 0px 4px #949494;
-	-webkit-box-shadow: 0px 0px 4px #949494;
-	box-shadow: 0px 0px 4px #949494;
+    -moz-box-shadow: 0px 0px 4px #949494;
+    -webkit-box-shadow: 0px 0px 4px #949494;
+    box-shadow: 0px 0px 4px #949494;
 }
 
 .master .album-list {
@@ -468,29 +467,30 @@ ul {
 }
 
 .more_content {
-	display: block;
-	width: 230px;
-	padding: 20px;
-	margin: 20px auto;
-	color: #fff;
-	font-size: 16px;
-	font-weight: bold;
-	cursor:pointer;
-	background: #c70300;
-	border-radius: 15px;
-	-moz-box-shadow: 1px 1px 6px #969696;
-	-webkit-box-shadow: 1px 1px 6px #969696;
-	box-shadow: 1px 1px 6px #969696;
-	text-align: center;
-	height: 20px;
+    display: block;
+    width: 230px;
+    padding: 20px;
+    margin: 20px auto;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #c70300;
+    border-radius: 15px;
+    -moz-box-shadow: 1px 1px 6px #969696;
+    -webkit-box-shadow: 1px 1px 6px #969696;
+    box-shadow: 1px 1px 6px #969696;
+    text-align: center;
+    height: 20px;
 }
 
 .more_content:hover {
-	background: #b00000;
-	-moz-box-shadow: 1px 1px 6px #595959;
-	-webkit-box-shadow: 1px 1px 6px #595959;
-	box-shadow: 1px 1px 6px #595959;
+    background: #b00000;
+    -moz-box-shadow: 1px 1px 6px #595959;
+    -webkit-box-shadow: 1px 1px 6px #595959;
+    box-shadow: 1px 1px 6px #595959;
 }
+
 
 /* Конец мастеров */
 
@@ -544,69 +544,127 @@ ul {
     margin: 20px 0;
 }
 
-#formRegLog
-{
+#formRegLog {
     display: flex;
     flex-flow: column;
     padding: 0px 20px;
 }
 
-#formRegLog > form
-{
+#formRegLog>form {
     display: flex;
     flex-flow: column;
     justify-content: center;
 }
 
-.inputblock > input
-{
+.inputblock>input {
     width: 100%;
     border: 1px solid #e2e2e2;
     box-sizing: border-box;
     border-radius: 10px;
     padding: 5px 0px;
     padding-left: 5px;
-    
 }
 
-.inputblock > label
-{
+.inputblock>label {
     padding: 5px;
 }
 
-
-.inputblock > input[type="submit"]
-{
+.inputblock>input[type="submit"] {
     margin-bottom: 10px;
     transition: 1s;
     background: #D0D1CF;
 }
 
-.inputblock > input[type="submit"]:hover
-{
+.inputblock>input[type="submit"]:hover {
     background: #C91C0E;
     color: #fff;
     transition: 1s;
 }
 
-
-#formRegLog >h3
-{
+#formRegLog>h3 {
     text-align: center;
     padding: 10px 0px;
 }
 
-.inputblock
-{
+.inputblock {
     margin-top: 10px;
 }
 
-#formRegLog > form > a
-{
+#formRegLog>form>a {
     font-size: 12px;
 }
 
-.hiuser
-{
+.hiuser {
     padding: 10px 15px;
+}
+
+.edit {
+    width: 100%;
+}
+
+.commentsto {
+    border-bottom: 1px solid red;
+    padding: 5px 0px;
+}
+
+.comments {
+    padding: 10px 10px;
+}
+
+.username {
+    padding: 10px 0px;
+    color: #555;
+}
+
+.Comment>form>input:hover {
+    color: #5E5757;
+}
+
+.Comment>form>textarea {
+    resize: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+
+.Comment>form {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+.Comment>form>input {
+    margin: 10px 0px;
+    background: none;
+}
+
+.application {
+    padding: 10px;
+}
+
+.applicationForm {
+    display: flex;
+    flex-flow: column;
+}
+
+.applicationForm>input,
+select {
+    width: 200px;
+    margin: 10px 0px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.applicationForm>input[type='submit'] {
+    background: #e2e2e2;
+    width: 220px;
+}
+
+.applicationTitles {
+    padding: 10px 10px;
+    color: #7d4545;
+}
+
+.tableTips {
+    text-align: center;
+    border-spacing: 10px 10px;
 }
