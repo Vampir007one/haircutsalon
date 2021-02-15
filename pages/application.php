@@ -141,35 +141,67 @@ HERE;
                 </form>
             </div>
 
-            <table>
-                <tr>
-                    <th>ФИО клиента</th>
-                    <th>Район</th>
-                    <th>Дата</th>
-                    <th>Время</th>
-                    <th>Предпочтение в причёске</th>
-                </tr>
-                <tr>
-                    <td>Иванов Иван Иванович</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
+            
 
             <?php 
-                // if($_SESSION['role'] == '1')
-                // {
-                //     if($_SESSION['id'] == $MastersData['id'])
-                //     {
-                //         echo 'ok';
-                //     }
-                //     $getMastersData = $db->query("SELECT * FROM `users`, `masters` WHERE `users`.`id` = `masters`.`master_id` AND `id` = '$_SESSION[id]'");
-                //     $MastersData = mysqli_fetch_array($getMastersData);
-                //     if($MastersData['id'] == $_SESSION['id'])
-                //     {
-                //         echo $MastersData['name'];
-                //     }
-                // }
+                if($_SESSION['role'] == '1')
+                {
+                    $getMastersData = $db->query("SELECT * FROM `users`, `masters` WHERE `users`.`id` = `masters`.`master_id` AND `id` = '$_SESSION[id]'");
+                    $MastersData = mysqli_fetch_array($getMastersData);
+                    if($_SESSION['id'] == $MastersData['id'])
+                    {
+                        $getClient = $db->query("
+                        SELECT
+                        `users`.`name`,
+                        `users`.`id`,
+                        `application`.`district`,
+                        `application`.`date`,
+                        `application`.`time`,
+                        `application`.`hair`
+                    FROM
+                        `users`,
+                        `application`
+                    WHERE
+                        `application`.`master_id` = '$_SESSION[id]' AND `users`.`id` = `application`.`client_id`
+                        ");
+                        $client = mysqli_fetch_array($getClient);
+                        if ($client) 
+                        {    
+                            printf('
+                            <table class="tableTips">
+                            <tr>
+                                <th>ФИО клиента</th>
+                                <th>Район</th>
+                                <th>Дата</th>
+                                <th>Время</th>
+                                <th>Предпочтение в причёске</th>
+                            </tr>
+                            ');
+
+                            do 
+                            {
+print <<<HERE
+                                <tr>
+                                    <td>$client[name]</td>
+                                    <td>$client[district]</td>
+                                    <td>$client[date]</td>
+                                    <td>$client[time]</td>
+                                    <td>$client[hair]</td>
+                                </tr>
+HERE;
+                            } while ( $client = mysqli_fetch_array($getClient) );
+
+                            printf("</table>");
+                        }
+                        else
+                        {
+                            echo "Записей нет";
+                        }
+                        
+
+                    }
+                    
+                }
             ?>
             
         </div>

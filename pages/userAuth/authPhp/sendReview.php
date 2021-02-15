@@ -3,40 +3,38 @@
     session_start();
     if($_POST['review'] != '')
     {
-        $sql = $db->query("
+        $sendReview = $db->query("
             INSERT INTO `comments`(
                 `id`,
                 `user_id`,
                 `master_id`,
-                `reply`,
                 `message`
             )
             VALUES(
                 NULL,
                 '$_SESSION[id]',
                 '$_POST[masterId]',
-                NULL,
                 '$_POST[review]'
             );
         ");
-        if ($sql) 
-        {
-            $result = [
-                'check' => 'Комментарий отправлен',
-            ];
-        }
-        else
-        {
-            $result = [
-                'check' => 'Что-то пошло не так',
-            ];
-        }
+            if ($sendReview) 
+            {
+                $sendComment = [
+                    'check' => 'Комментарий отправлен',
+                ];
+            }
+            else
+            {
+                $sendComment = [
+                    'check' => 'Что-то пошло не так',
+                ];
+            }
     }
     else
     {
-        $result = [
+        $sendComment = [
             'check' => 'Проблема с базой',
         ];
     }
-    echo json_encode($result);
+    echo json_encode($sendComment);
 ?>
